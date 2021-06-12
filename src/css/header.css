@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: orangered; */
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+}
+.header__logo{
+    font-size: 20px;
+}
+.header__navList{
+    display: flex;
+    list-style: none;
+}
+.header__navItem{
+    margin-left: 2rem;
+}
+.header__link{
+    text-decoration: none;
+    color: currentColor;
+    font-size: 1.4rem;
+}
+.header__link--active{
+    color:#E96B03;
+}
