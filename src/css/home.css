@@ -26,6 +26,9 @@
     border-radius: 7px;
     /* background-image: linear-gradient(to right,#ff90359f,#ff9e4e3a); */
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .statcard__heading{
     text-transform: uppercase;
