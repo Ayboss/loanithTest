@@ -24,11 +24,14 @@
     background-color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 7px;
-    /* background-image: linear-gradient(to right,#ff90359f,#ff9e4e3a); */
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+}
+.statcard-active{
+    background-image: linear-gradient(to right,#ff90359f,#ff9e4e3a);
 }
 .statcard__heading{
     text-transform: uppercase;

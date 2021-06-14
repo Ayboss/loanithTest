@@ -1,6 +1,6 @@
 import React from 'react'
 import {Line} from 'react-chartjs-2'
-function Graph() {
+function Graph({data, name}) {
     return (
         <div className="home__graph">
             <Line height={300} width={'100%'}
@@ -20,10 +20,10 @@ function Graph() {
                 'December'
               ],
               datasets: [{
-                label: 'Account Limit',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [0, 5,7,20,25,34,40,45,51,40,55,57],
+                label: name,
+                backgroundColor: data?.color,
+                borderColor: data?.color,
+                data: data?.data,
               }]}
             }
             options={{ maintainAspectRatio: false }}
