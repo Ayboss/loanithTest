@@ -1,0 +1,113 @@
+.transactions{
+    background-color: #fff;
+    width: 80%;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+.transactions__table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.transactions__table td,
+.transactions__table th{
+    font-size: 1.3rem;
+    padding: 10px;
+    border-left: 1px solid #ECF0F1;
+    border-right: 1px solid #ECF0F1;
+    border-top: 1px solid #ECF0F1;
+}
+.transactions__table th{
+    background-color: #fafcff;
+}
+.transactions__heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 13px;
+    position: relative;
+}
+.transactions__heading p{
+    font-size: 20px;
+}
+.transactions__filter{
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+.transactions__filter:hover{
+    background-color: #ff9e4e3a;
+}
+.filter-box{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgba(0,0,0,.1); */
+    display: none;
+}
+.filter-box-active{
+   display: block; 
+}
+.filter{
+    width: 400px;
+    /* background-color: orangered; */
+    box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+    position: absolute;
+    top:50px;
+    right: 0px;
+    display: none;
+    z-index: 1500;
+}
+.filter-active{
+    display: block;
+}
+.filter__head{
+    padding: 1rem;
+    font-size: 13px;
+    background-color: #f4f6f8;
+    /* font-weight: bold; */
+}
+.filter__body{
+    padding: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+.filter__options{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.filter__option{
+    padding: .5rem;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.filter__dates{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transactions__description{
+    position: relative;
+}
+.transactions__description:hover .transactions__description-more{
+    display: block;
+}
+.transactions__description-less{}
+.transactions__description-more{
+    position: absolute;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    top:10px;
+    width: 300px;
+    box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+    display: none;
+    z-index:1000;
+}

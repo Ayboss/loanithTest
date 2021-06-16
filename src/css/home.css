@@ -1,13 +1,16 @@
 .home__body{
     display: grid;
-    grid-template-columns: 20rem 1fr;
+    grid-template-columns: 22rem 1fr;
     grid-gap: 3rem;
     padding: 0px 3rem;
 }
 .home__stats{
     /* background-color: darkorange; */
+    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.2);
+    padding:3rem 2rem 0px 0px;
 }
 .home__graphs{
+    margin-top: 3rem;
 }
 .home__graph{
     background-color: white;
