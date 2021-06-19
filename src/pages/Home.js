@@ -24,10 +24,23 @@ const graphData = {
         color: 'pink',
         data:[2,6,7,21,22,33,45,45,51,56,58,66]
     },
+    accountHolder: {
+        color: '#00ff26',
+        data:[2,6,7,21,22,33,45,45,51,56,58,66]
+    },
+    newsletter: {
+        color: '#9d7219',
+        data:[2,6,7,21,22,33,45,45,51,56,58,66]
+    },
+    openComplaints: {
+        color: '#c700d9',
+        data:[2,6,7,21,22,33,45,45,51,56,58,66]
+    }
 }
 
 function Home() {
     const [account, setAccount] = useState('accountLimit');
+    const [userstat, setUserstat] = useState('accountHolder');
     return (
         <div className="home__body">
             <div className="home__stats">
@@ -38,13 +51,15 @@ function Home() {
                 <StatCard title="Statement Credit" figure="$500" stroke="gold" onClick={()=>setAccount('statementCredit')} active={account === 'statementCredit'}/>
                 <StatCard title="Default Amount" figure="$4,300" stroke="pink" onClick={()=>setAccount('defaultAmount')} active={account === 'defaultAmount'}/>
                 <h3 className="home__stats-heading">Users STATS</h3>
-                <StatCard title="Account Holders" figure="300"/>
-                <StatCard title="Newsletter Subscribers" figure="300"/>
-                <StatCard title="OpenConplaints" figure="20"/>
+                <StatCard title="Account Holders" figure="300" stroke="#00ff26" onClick={()=>setUserstat('accountHolder')} active={userstat === 'accountHolder'}/>
+                <StatCard title="Newsletter Subscribers" figure="300" stroke="#9d7219" onClick={()=>setUserstat('newsletter')} active={userstat === 'newsletter'}/>
+                <StatCard title="Open Complaints" figure="20" stroke="#c700d9" onClick={()=>setUserstat('openComplaints')} active={userstat === 'openComplaints'}/>
             </div>
             <div className="home__graphs">
-                <Graph data={graphData[account]} name={account}/>
-                <Graph data={graphData[account]} name={account}/>
+                <div className="home__graphsinner">
+                    <Graph data={graphData[account]} name={account} />
+                    <Graph data={graphData[userstat]} name={userstat} />
+                </div>
             </div>
         </div>
     )

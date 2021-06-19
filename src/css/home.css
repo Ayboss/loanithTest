@@ -6,11 +6,15 @@
 }
 .home__stats{
     /* background-color: darkorange; */
-    box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 5px 1px 4px 0px rgb(0 0 0 / 12%);
     padding:3rem 2rem 0px 0px;
 }
 .home__graphs{
     margin-top: 3rem;
+    justify-self: center;
+}
+.home__graphsinner{
+ max-width: 800px;
 }
 .home__graph{
     background-color: white;
@@ -44,4 +48,18 @@
 .statcard__figure{
     font-weight: 700;
     font-size: 20px;
+}
+.graph__option{
+    display: flex;
+    justify-content: space-between;
+}
+.graph__option a{
+    color: #fff;
+    background-color: #E96B03;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 5px;
 }

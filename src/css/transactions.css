@@ -3,11 +3,14 @@
     width: 80%;
     margin: 3rem auto;
     padding: 2rem;
+    background-color: #E96B03;
 }
 .transactions__table{
     width: 100%;
     text-align: left;
     border-collapse: collapse;
+    /* padding: 1rem; */
+
 }
 .transactions__table td,
 .transactions__table th{
@@ -16,9 +19,10 @@
     border-left: 1px solid #ECF0F1;
     border-right: 1px solid #ECF0F1;
     border-top: 1px solid #ECF0F1;
+    background-color: #fff;
 }
 .transactions__table th{
-    background-color: #fafcff;
+    background-color: #ffd6b5;
 }
 .transactions__heading{
     display: flex;
@@ -30,11 +34,13 @@
 }
 .transactions__heading p{
     font-size: 20px;
+    color: #fff;
 }
 .transactions__filter{
     padding: 1rem 1.5rem;
     box-shadow: 0px 0px 3px rgba(0,0,0,.3);
     cursor: pointer;
+    background-color: #fff;
 }
 .transactions__filter:hover{
     background-color: #ff9e4e3a;
@@ -84,15 +90,36 @@
     padding: .5rem;
     background-color: #fff;
     border: none;
-    box-shadow: 0px 0px 2px rgba(0,0,0,.3);
     margin-bottom: 1rem;
     cursor: pointer;
+}
+.filter__option:focus{
+    outline: none;
+}
+.filter__option--active{
+    box-shadow: 0px 0px 3px rgba(0,0,0,.3);
 }
 .filter__dates{
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.filter__buttonside{
+    display: flex;
+    justify-content: flex-end;
+}
+.filter__button{
+    background-color: #fff;
+    border: none;
+    padding: .7rem 1.5rem;
+    background-color:#E96B03;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter__button:focus{
+    outline: none;
 }
 .transactions__description{
     position: relative;
@@ -105,9 +132,35 @@
     position: absolute;
     background-color: white;
     padding: 1rem 1.5rem;
-    top:10px;
+    top:15px;
+    left: 25px;
     width: 300px;
-    box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+    box-shadow: 0px 0px 3px rgba(0,0,0,.3);
     display: none;
     z-index:1000;
+    line-height: 2;
+}
+/* Just a Transaction page */
+.transaction{
+    padding: 2rem 3rem;
+}
+.transaction__list{
+    list-style: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+}
+.transaction__detail{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background-color: white;
+}
+.transaction__detail h3{
+    margin-bottom: .3rem;
+    font-weight: bold;
+    color:#E96B03;
+    text-transform: uppercase;
+}
+.transaction__detail p{
+    font-size: 1.4rem;
 }
