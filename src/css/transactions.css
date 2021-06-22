@@ -164,3 +164,9 @@
 .transaction__detail p{
     font-size: 1.4rem;
 }
+
+
+
+.table__icon{
+    width: 30px;
+}

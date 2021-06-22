@@ -6,10 +6,13 @@ import '../css/transactions.css';
 function Transactions() {
     const [filter,setFilter] =  useState(false);
     const [period, setPeriod] = useState('');
-    const [transactions, setTransactions] = useState([])
-    // console.log(transactionsdata);
+    const [category, setCategory] = useState('');
+    const [transactions, setTransactions] = useState([]);
+    const [filteredTransactions, setFilteredTransactions] = useState([]);
+    
     useEffect(()=>{
         setTransactions(transactionsdata);
+        setFilteredTransactions(transactionsdata);
     },[])
     const displayFilterOption = ()=>{
         setFilter(!filter)
@@ -17,7 +20,14 @@ function Transactions() {
     const handlePeriodChange = (value)=>{
     }
     const handleFilter = ()=>{
-        
+     //filter
+     setFilteredTransactions(
+            transactions.filter((trans)=>{
+            //if period is empty, filter on by category, if category is empty filter by period only 
+            if(trans.category === category || category === ''){
+                return true
+            }else{return false}})
+         )
     }
     const renderDescription = (description)=>{
         if(description.length > 40){
@@ -52,12 +62,12 @@ function Transactions() {
                 <div className="filter__head">Category</div>
                 <div className="filter__body">
                     <div className="filter__options">
-                        <button className="filter__option">All transactions</button>
-                        <button className="filter__option">Cash Advance</button>
-                        <button className="filter__option filter__option--active">Bill Payments</button>
-                        <button className="filter__option">Balance transfer</button>
-                        <button className="filter__option">Loan Repayment</button>
-                        <button className="filter__option">Statement Credit</button>
+                        <button  onClick={()=>setCategory('')} className={`filter__option ${category === ''?'filter__option--active':''}`} >All transactions</button>
+                        <button onClick={()=>setCategory('cashAdvance')} className={`filter__option ${category === 'cashAdvance'?'filter__option--active':''}`}>Cash Advance</button>
+                        <button onClick={()=>setCategory('billPayment')} className={`filter__option ${category === 'billPayment'?'filter__option--active':''}`}>Bill Payments</button>
+                        <button onClick={()=>setCategory('balanceTransfer')} className={`filter__option ${category === 'balanceTransfer'?'filter__option--active':''}`}>Balance transfer</button>
+                        <button onClick={()=>setCategory('loanRepayment')} className={`filter__option ${category === 'loanRepayment'?'filter__option--active':''}`}>Loan Repayment</button>
+                        <button onClick={()=>setCategory('statementCredit')} className={`filter__option ${category === 'statementCredit'?'filter__option--active':''}`}>Statement Credit</button>
                     </div>
                 </div>
                 <div className="filter__head">
@@ -78,8 +88,8 @@ function Transactions() {
                     </tr>
                 </thead>
                 <tbody>
-                    {transactions.map((transaction)=>{
-                        return(<tr>
+                    {filteredTransactions.map((transaction)=>{
+                        return(<tr >
                             <td>{transaction.date}</td>
                             <td><Link to={`/transactions/${transaction.transactionId}`}>{transaction.transactionId}</Link></td>
                             <td><Link to={`/users/${transaction.initiatorId}`}>{transaction.initiatorId}</Link></td>

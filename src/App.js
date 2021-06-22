@@ -5,6 +5,7 @@ import Home from './pages/Home.js';
 import Transactions from './pages/Transactions.js';
 import Transaction from './pages/Transaction.js';
 import User from './pages/User.js';
+import Users from './pages/Users.js';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/users/:id">
           <User />
+        </Route>
+        <Route path="/users">
+          <Users />
         </Route>
         <Route path="/transactions/:id">
           <Transaction/>
