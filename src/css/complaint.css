@@ -1,64 +1,99 @@
+.complaint__body{
+    display: grid;
+    grid-template-columns: 22rem 1fr;
+    grid-gap: 3rem;
+    padding: 0px 3rem;
+}
+.complaint__stats{
+    /* background-color: darkorange; */
+    box-shadow: 5px 1px 4px 0px rgb(0 0 0 / 12%);
+    padding:3rem 2rem 0px 0px;
+}
+.complaint__graphs{
+    height: calc(100vh - 47px);
+}
 .complaint{
     max-width: 800px;
+    width: 100%;
     background-color: white;
-    margin: 20px auto;
-    padding: 10px
+    margin: 20px auto 0px;
+    padding: 10px;
+    height: 94%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-.complaint__open{
-    padding: 0px 20px;
+.complaint__header{
+    background-color: #ffd6b5;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
 }
-.complaint__open >h3{
-    font-size: 20px;
-    margin-bottom: 10px;
+.complaint__header > h3{
+    flex: 1;
+    margin-left: 1rem;
+    font-size: 1.6rem
 }
-.complaint__list{
-    list-style: none;
+.complaint__header > button{
+    padding: 7px 20px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    border-radius: 1000px;
+    font-weight: bold
 }
 .complaint__chat{
-    margin-bottom: 10px;
-    background-color: #ffd6b5;
+    list-style: none;
     padding: 10px;
     border-radius: 5px;
-}
-.complaint__user{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 10px;
-}
-.complaint__admin{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-end;
-    margin-left: 10px;
-}
-.complaint__user > p{
-    font-size: 16px
-}
-.complaint__admin > p{
-    font-size: 16px
-}
-.complaint__close{}
-.complaint__close > h3{
-    font-size: 20px;
-}
-.complaint__img{
-    /* overflow: hidden; */
-}
-.complaint__img > img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    flex: 1;
+    overflow-y: scroll;
 }
 .complaint__reply{
     background-color: #fff;
     display: flex;
     align-items: center;
     border-radius: 10000px;
-    padding: 10px 10px;
+    padding: 5px 7px;
     margin-top: 20px;
+    /* position: absolute;
+    bottom:0px;
+    left: 0px; */
+    width: 100%;
+    border: 1px solid #666;
+}
+.complaint__user{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.complaint__admin{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.complaint__user > p{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: max-content;
+    border-radius:5px;
+    border-top-left-radius:0px;
+    padding: 5px;
+    font-size: 16px
+}
+.complaint__admin > p{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: max-content;
+    border-radius:5px;
+    border-top-right-radius:0px;
+    padding: 5px;
+    font-size: 16px
+}
+.complaint__img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .complaint__input{
     flex: 1;
@@ -80,8 +115,66 @@
     align-items: center;
     justify-content: center;
     background-color: #ffd6b5;
+    cursor: pointer;
 }
 .complaint__send  img{
     height: 25px;
     width: 25px;
+}
+.complaint__satisfied{
+    margin-top: 10px;
+}
+.complaint__satisfied button{
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+.complaint__close{
+    padding: 0px 20px;
+}
+.complaint__close > h3{
+    font-size: 20px;
+}
+
+/*  side bar chats*/
+.complaint__tab{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.complaint__tab--btn{
+    flex: 1;
+    /* text-decoration: underline; */
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+.complaint__tab--btnActive{
+    border-bottom: 2px solid #E96B03;  
+}
+.complaint__list{
+    list-style: none;
+}
+.complaint__item{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+}
+.complaint__item:hover{
+    background-color: #ffd6b5;
+    border-bottom: 1px solid transparent;
+}
+.complaint__userImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.complaint__itemDetails >h3{
+    font-size: 15px;
 }
