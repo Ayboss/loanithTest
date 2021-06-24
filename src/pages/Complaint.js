@@ -20,7 +20,7 @@ function Complaint() {
                             <div className="complaint__img"><img src={admin} alt="admin"/></div>
                         </div>
                         <div className="complaint__reply">
-                            <input placeholder="type something..." className="complaint__input"/><button className="complaint__send">send</button>
+                            <input placeholder="type something..." className="complaint__input"/><button className="complaint__send"><img src={send} alt="send"/></button>
                         </div>
                         <div className="compliant__"><button>Satisfied and Close</button></div>
                     </li>
@@ -34,7 +34,7 @@ function Complaint() {
                             <div className="complaint__img"><img src={admin} alt="admin"/></div>
                         </div>
                         <div className="complaint__reply">
-                            <input placeholder="type something..." className="complaint__input"/><button className="complaint__send"><img src={send} alt=""/></button>
+                            <input placeholder="type something..." className="complaint__input"/><button className="complaint__send"><img src={send} alt="send"/></button>
                         </div>
                         <div className="compliant__"><button>Satisfied and Close</button></div>
                     </li>

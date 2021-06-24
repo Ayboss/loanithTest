@@ -55,6 +55,7 @@
 .complaint__reply{
     background-color: #fff;
     display: flex;
+    align-items: center;
     border-radius: 10000px;
     padding: 10px 10px;
     margin-top: 20px;
@@ -71,5 +72,16 @@
 }
 .complaint__send{
     margin-left: 10px;
-    width: 30px
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd6b5;
+}
+.complaint__send  img{
+    height: 25px;
+    width: 25px;
 }
