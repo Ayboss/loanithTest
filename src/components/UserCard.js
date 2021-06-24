@@ -1,8 +1,8 @@
 import React from 'react'
 
-function UserCard({title, figure, onClick}) {
+function UserCard({title, figure, onClick, active}) {
     return (
-        <div  className={`statcard`} onClick={onClick}>
+        <div className={`statcard ${active?'statcard-active':''}`} onClick={onClick}>
             <div>
                 <h3 className="statcard__heading">{title}</h3>
                 <p className="statcard__figure">{figure}</p>

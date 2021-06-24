@@ -5,6 +5,11 @@
     padding: 2rem;
     background-color: #E96B03;
 }
+.transactions__table--container{
+    padding: 2px;
+    background-color: #fff;
+    overflow-x:scroll;
+}
 .transactions__table{
     width: 100%;
     text-align: left;
@@ -41,9 +46,11 @@
     box-shadow: 0px 0px 3px rgba(0,0,0,.3);
     cursor: pointer;
     background-color: #fff;
+    transition: all .2s
 }
 .transactions__filter:hover{
     background-color: #ff9e4e3a;
+    color: white;
 }
 .filter-box{
     position: fixed;
@@ -164,9 +171,18 @@
 .transaction__detail p{
     font-size: 1.4rem;
 }
-
-
-
 .table__icon{
     width: 30px;
+}
+.table__button{
+    color: black;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width:"768px"){
+
 }

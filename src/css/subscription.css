@@ -1,0 +1,18 @@
+.subscription{
+    padding: 20px
+}
+.subscription__div{
+    background-color: #fff;
+    max-width: 500px;
+    margin: 100px auto 10px;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.subscription__div > h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.subscription__div > a{
+    font-size: 14px;
+}

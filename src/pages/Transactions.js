@@ -28,6 +28,7 @@ function Transactions() {
                 return true
             }else{return false}})
          )
+         displayFilterOption();
     }
     const renderDescription = (description)=>{
         if(description.length > 40){
@@ -75,6 +76,7 @@ function Transactions() {
                 </div>
             </div>     
             </div>
+            <div className="transactions__table--container">
             <table className="transactions__table">
                 <thead>
                     <tr>
@@ -103,6 +105,7 @@ function Transactions() {
                     })}
                 </tbody>
             </table>
+            </div>       
         </div>
     )
 }

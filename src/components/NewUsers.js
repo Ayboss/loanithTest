@@ -11,6 +11,7 @@ function NewUsers() {
                     <th>Full Name</th>
                     <th>Phone</th>
                     <th>Email</th>
+                    <th>Referral code</th>
                     <th>call</th>
                     <th>message</th>
                 </tr>
@@ -20,6 +21,31 @@ function NewUsers() {
                     <td><Link to={`/users/635454wt5grgw343`}>John Doe</Link></td>
                     <td>238472903944</td>
                     <td>johndoe@gmail.com</td>
+                    <td>23839</td>
+                    <td><img className="table__icon" src={call} alt="call"/></td>
+                    <td><img className="table__icon" src={message} alt="message"/></td>
+                </tr>
+                <tr>
+                    <td><Link to={`/users/635454wt5grgw343`}>Adedeji Adetola</Link></td>
+                    <td>238472903944</td>
+                    <td>tolaDeyHere@gmail.com</td>
+                    <td>23839</td>
+                    <td><img className="table__icon" src={call} alt="call"/></td>
+                    <td><img className="table__icon" src={message} alt="message"/></td>
+                </tr>
+                <tr>
+                    <td><Link to={`/users/635454wt5grgw343`}>John Doe</Link></td>
+                    <td>238472903944</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>23839</td>
+                    <td><img className="table__icon" src={call} alt="call"/></td>
+                    <td><img className="table__icon" src={message} alt="message"/></td>
+                </tr>
+                <tr>
+                    <td><Link to={`/users/635454wt5grgw343`}>Adedeji Adetola</Link></td>
+                    <td>238472903944</td>
+                    <td>tolaDeyHere@gmail.com</td>
+                    <td>23839</td>
                     <td><img className="table__icon" src={call} alt="call"/></td>
                     <td><img className="table__icon" src={message} alt="message"/></td>
                 </tr>

@@ -45,15 +45,19 @@ function Home() {
         <div className="home__body">
             <div className="home__stats">
                 <h3 className="home__stats-heading">ACCOUNT STATS</h3>
-                <StatCard title="Account Limit" figure="$2,000" stroke="red" onClick={()=>setAccount('accountLimit')} active={account === 'accountLimit'} />
-                <StatCard title="Credit Limit" figure="$2,500" stroke="blue" onClick={()=>setAccount('creditLimit')} active={account === 'creditLimit'}/>
-                <StatCard title="Credit Balance" figure="$3,206" stroke="green" onClick={()=>setAccount('creditBalance')} active={account === 'creditBalance'}/>
-                <StatCard title="Statement Credit" figure="$500" stroke="gold" onClick={()=>setAccount('statementCredit')} active={account === 'statementCredit'}/>
-                <StatCard title="Default Amount" figure="$4,300" stroke="pink" onClick={()=>setAccount('defaultAmount')} active={account === 'defaultAmount'}/>
+                <div className="stat__container">
+                    <StatCard title="Account Limit" figure="$2,000" stroke="red" onClick={()=>setAccount('accountLimit')} active={account === 'accountLimit'} />
+                    <StatCard title="Credit Limit" figure="$2,500" stroke="blue" onClick={()=>setAccount('creditLimit')} active={account === 'creditLimit'}/>
+                    <StatCard title="Credit Balance" figure="$3,206" stroke="green" onClick={()=>setAccount('creditBalance')} active={account === 'creditBalance'}/>
+                    <StatCard title="Statement Credit" figure="$500" stroke="gold" onClick={()=>setAccount('statementCredit')} active={account === 'statementCredit'}/>
+                    <StatCard title="Default Amount" figure="$4,300" stroke="pink" onClick={()=>setAccount('defaultAmount')} active={account === 'defaultAmount'}/>
+                </div>
                 <h3 className="home__stats-heading">Users STATS</h3>
-                <StatCard title="Account Holders" figure="300" stroke="#00ff26" onClick={()=>setUserstat('accountHolder')} active={userstat === 'accountHolder'}/>
-                <StatCard title="Newsletter Subscribers" figure="300" stroke="#9d7219" onClick={()=>setUserstat('newsletter')} active={userstat === 'newsletter'}/>
-                <StatCard title="Open Complaints" figure="20" stroke="#c700d9" onClick={()=>setUserstat('openComplaints')} active={userstat === 'openComplaints'}/>
+                <div className="stat__container">
+                    <StatCard title="Account Holders" figure="300" stroke="#00ff26" onClick={()=>setUserstat('accountHolder')} active={userstat === 'accountHolder'}/>
+                    <StatCard title="Newsletter Subscribers" figure="300" stroke="#9d7219" onClick={()=>setUserstat('newsletter')} active={userstat === 'newsletter'}/>
+                    <StatCard title="Open Complaints" figure="20" stroke="#c700d9" onClick={()=>setUserstat('openComplaints')} active={userstat === 'openComplaints'}/>
+                </div>
             </div>
             <div className="home__graphs">
                 <div className="home__graphsinner">
