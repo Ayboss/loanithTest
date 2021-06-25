@@ -63,10 +63,16 @@
     font-size: 13px;
     border-radius: 5px;
 }
+.table_overflow{
+    overflow-x: scroll;
+}
 @media (max-width: 768px){
+    .home__graphs{
+        justify-self: auto;
+    }
     .home__body{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-gap: 3rem;
         padding: 0px 3rem;
     }

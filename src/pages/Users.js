@@ -29,7 +29,9 @@ function Users() {
                 <UserCard title="Barred Users" figure={24} onClick={()=>setUserCategory('barredUsers')} active={userCategory === 'barredUsers'}/>
             </div>
             <div className="home__graphs">
+                <div className="table_overflow">
                  {usersjsx[userCategory]}
+                 </div> 
             </div>
         </div>
     )
