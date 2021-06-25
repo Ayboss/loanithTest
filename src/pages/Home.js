@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
-import StatCard from '../components/StatCard'
-import Graph from '../components/Graph'
+import React, {useState, useEffect} from 'react';
+import {accountMonth,accountYear,usersYear} from '../Data/graphData'
+import StatCard from '../components/StatCard';
+import Graph from '../components/Graph';
 import '../css/home.css';
 
 const graphData = {
@@ -41,6 +42,25 @@ const graphData = {
 function Home() {
     const [account, setAccount] = useState('accountLimit');
     const [userstat, setUserstat] = useState('accountHolder');
+    const [graphDataAccount, setGraphDataAccount] = useState([])
+    const [graphDataUsers, setGraphDataUsers] = useState([]);
+    const [periodAccount, setPeriodAccount] = useState('year');
+    const [periodUser, setPeriodUser] = useState('year');
+    useEffect(() => {
+        
+        if(periodAccount === 'month'){
+                setGraphDataAccount(accountMonth);
+        }else{
+            setGraphDataAccount(accountYear);
+        }
+        if(periodUser === 'month'){
+            setGraphDataUsers(usersYear);
+        }else{
+         setGraphDataUsers(usersYear);
+        }
+        
+    }, [periodAccount, periodUser])
+    
     return (
         <div className="home__body">
             <div className="home__stats">
@@ -61,8 +81,8 @@ function Home() {
             </div>
             <div className="home__graphs">
                 <div className="home__graphsinner">
-                    <Graph data={graphData[account]} name={account} />
-                    <Graph data={graphData[userstat]} name={userstat} />
+                    <Graph data={graphDataAccount[account]} name={account} periodClick={setPeriodAccount}/>
+                    <Graph data={graphDataUsers[userstat]} name={userstat} periodClick={setPeriodUser} />
                 </div>
             </div>
         </div>
