@@ -9,6 +9,29 @@
 }
 .header__logo{
     font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 5px;
+    border: 3px solid #E96B03;
+    position: relative;
+}
+.logo::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #E96B03;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%);
 }
 .header__navList{
     display: flex;
