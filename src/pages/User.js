@@ -90,7 +90,7 @@ function User() {
                 </div>
                 <div className="user__box">
                     <h3>Relationship</h3>
-                    <p>Gay patner</p>
+                    <p>Brother</p>
                 </div>
             </div>
             <h2 className="user__heading">
